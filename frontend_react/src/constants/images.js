@@ -34,9 +34,9 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
-import dat from '../assets/dat.png'
+import dat1 from '../assets/dat1.png'
 export default {
-  dat,
+  dat1,
   email,
   mobile,
   api,
