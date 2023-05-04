@@ -34,8 +34,11 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
-import dat1 from '../assets/dat1.png'
+import dat1 from '../assets/dat1.png';
+import postgresql1 from '../assets/postgresql1.png';
+
 export default {
+  postgresql1,
   dat1,
   email,
   mobile,

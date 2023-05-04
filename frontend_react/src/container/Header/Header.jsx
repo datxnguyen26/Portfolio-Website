@@ -2,6 +2,8 @@ import React from 'react'
 import './Header.scss'
 import { motion } from 'framer-motion'
 import { images } from '../../constants'
+import { AppWrap } from '../../wrapper'
+
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -15,7 +17,7 @@ const scaleVariants = {
 
 export const Header = () => {
   return (
-    <div id="home" className="app__header app__flex">
+    <div className="app__header app__flex">
       <motion.div
         whileInView= {{ x:[-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -31,8 +33,8 @@ export const Header = () => {
             </div>
 
             <div className="tag-cmp app__flex">
-              <p className="p-text">UCSD Graduate</p>
-              <p className="p-text">B.S. CompSci</p> 
+              <p className="p-text">University of California, San Diego</p>
+              <p className="p-text">B.S. Computer Science</p> 
             </div>
           </div>
       </motion.div>
@@ -46,7 +48,6 @@ export const Header = () => {
         <motion.img
            whileInView={{ scale: [0, 1] }}
            transition={{ duration: 1, ease: 'easeInOut' }}
-           className="app__header-img"
            src={images.circle}
            alt="profile_circle"
            className="overlay_circle"
@@ -58,7 +59,7 @@ export const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        {[images.postgresql1, images.react, images.node].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle"/>
           </div>
@@ -68,4 +69,4 @@ export const Header = () => {
   )
 }
 
-export default Header
+export default AppWrap(Header, 'home')
